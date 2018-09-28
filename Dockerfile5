@@ -1,0 +1,10 @@
+FROM centos
+RUN yum install httpd -y
+EXPOSE 8080
+WORKDIR /home/ravi
+LABEL raviteja=n
+MAINTAINER nalabothu
+COPY elasticsearch-6.4.0 /home/ravi
+ADD https://github.com/nalabothuraviteja/jenkins-ansible-tomcat.git /home/ravi
+CMD yum install git -y
+VOLUME /mvv

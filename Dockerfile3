@@ -1,0 +1,13 @@
+FROM ubuntu
+WORKDIR /home/ravi
+COPY ./Dockerfile /home/ravi/Dockerfile
+ADD ./Dockerfile /home/ravi/
+ADD https://github.com/nalabothuraviteja/morning.git /home/ec2-user
+ENV JAVA_HOME=/usr/lib/jvm
+#RUN apt-get update -y
+RUN apt-get install git -y
+#CMD apt-get update -y
+RUN mkdir /kk
+RUN touch /kk/ravi
+VOLUME /kk
+
